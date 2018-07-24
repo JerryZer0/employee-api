@@ -14,7 +14,7 @@ public class EmployeeController {
     private EmployeeService employeeService;
 
     @GetMapping("employees")
-    public Employee getEmployeeInfo(){
+    public List<Employee> getEmployeeInfo(){
         Employee employee1 = new Employee(1,"小明",20,"男");
         Employee employee2 = new Employee(2,"小红",18,"女");
         List<Employee> employeeList = new ArrayList<>();
