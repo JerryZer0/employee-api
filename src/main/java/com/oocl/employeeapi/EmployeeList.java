@@ -20,4 +20,12 @@ public class EmployeeList {
     public List<Employee> getEmployeeList() {
         return employeeList;
     }
+
+    public int getNumber(){
+        return employeeList.size();
+    }
+
+    public Employee findById(int id){
+        return employeeList.get(id-1);
+    }
 }

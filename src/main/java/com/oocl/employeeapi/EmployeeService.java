@@ -14,9 +14,7 @@ public class EmployeeService {
         return employeeList;
     }
 
-//    public Employee find(int id) {
-//        for(int i=0;i<employeeList.size();i++){
-//
-//        }
-//    }
+    public Employee find(int id) {
+        return employeeList.findById(id);
+    }
 }
