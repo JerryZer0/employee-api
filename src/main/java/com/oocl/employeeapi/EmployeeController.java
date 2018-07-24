@@ -2,6 +2,7 @@ package com.oocl.employeeapi;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -15,12 +16,15 @@ public class EmployeeController {
 
     @GetMapping("employees")
     public List<Employee> getEmployeeInfo(){
-        Employee employee1 = new Employee(1,"小明",20,"男");
-        Employee employee2 = new Employee(2,"小红",18,"女");
-        List<Employee> employeeList = new ArrayList<>();
-        employeeList.add(employee1);
-        employeeList.add(employee2);
-        return employeeService.showEmp(employeeList);
+        EmployeeList employeeList = new EmployeeList();
+        List<Employee> empList = employeeList.getEmployeeList();
+        return employeeService.showEmp(empList);
     }
+
+//    @PostMapping("employees/{name}")
+//    public String addEmployee(){
+//        return
+//    }
+
 
 }
